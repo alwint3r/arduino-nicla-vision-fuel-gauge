@@ -121,5 +121,12 @@ void loop()
     Serial.print("SOC = ");
     Serial.println(soc);
 
+    int TTE = ReadRegister(0x11);
+    float seconds = TTE * 5.625;
+    Serial.print("TTE = ");
+    Serial.println(TTE);
+    Serial.print(" TTE(s) = ");
+    Serial.println(seconds);
+
     delay(3000);
 }
